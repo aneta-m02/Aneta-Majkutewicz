@@ -11,13 +11,14 @@ def setup():
     iteracja_programu = 430
 
 def draw():          
-    stroke(252, 3, 198, 100)                
+    stroke(252, 3, 198, 100)             
     stroke(*slownik_kolorow["niebieski"])
-    point(width/100,height/100)           
+    # point(width/100,height/100)  # zbędne         
     fill(*lista_kolorow[iteracja_programu%len(lista_kolorow)])
     global iteracja_programu
-    iteracja_programu -=1
+    iteracja_programu -=1 # to doprowadzido minusowych wartości
     rect(iteracja_programu, iteracja_programu, 70,70)
     rect(0, iteracja_programu, 70,70)
     if mousePressed:
         exit()
+#1,75 - ruch jest nie do końca po tej ścieżce co powinien
