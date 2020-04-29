@@ -11,10 +11,10 @@ def draw():
     print(hex(get(mouseX, mouseY)))               
     global slownik_kolorow
     fill(*slownik_kolorow["niebieski"])           
-    if mousePressed:        
+    if mousePressed:   # miało być na najechanie, nie kliknięcie      
        global slownik_kolorow
        fill(*slownik_kolorow["fioletowy"])        
-    if keyPressed:
+    if keyPressed: # powinno być doprecyzowane na jakie klawisze
        global slownik_kolorow               
        fill(*slownik_kolorow["żółty"])       
     s = createShape() 
@@ -25,4 +25,7 @@ def draw():
     s.vertex(width/40, height/3*5+10)
     s.vertex(width-40, height/5)
     s.endShape(CLOSE) 
-    shape( s, 140, 50, width/2-80,height/2) 
+    shape( s, 140, 50, width/2-80,height/2)
+    # ładna kompozycja
+    
+#0,75p
