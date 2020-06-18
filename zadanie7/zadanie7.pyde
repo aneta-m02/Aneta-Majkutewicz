@@ -5,7 +5,7 @@ class Pet():
     def speak(self):
         super().__init__()
         return 'no sound'
-class Alpaca(Pet):
+class Alpaca(Pet): # <3
      def __init__(self, name):
         self.name = name
      def speak(self):
@@ -52,3 +52,5 @@ def mouseClicked():
         pet.speak()
         if isinstance(pet, Dog):
             pet.gimmePaw()
+
+# 1,5pkt, brakuje nadpisania odejmowania
