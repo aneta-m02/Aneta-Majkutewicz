@@ -14,6 +14,8 @@ class PasiastyKwadrat(Kwadrat):
         for pasek in range(0, paski): 
             line(x+_xLinii_, y, x+_xLinii_, y+self.bok)
             _xLinii_ +=space
+
+# brak dodatkowej klasy, a to ją bym oceniała
             
 def setup():
     size(500, 500)
@@ -51,4 +53,4 @@ def draw():
     duzyPasiastyKwadrat.sketch(200, 370)
     fill(*slownik_kolorow["niebieski"])
     
-    #Przepraszam za spóźnienie :)
+#brak zrozumienia polecenia jest tu gorszym przewinieniem... 0pkt
