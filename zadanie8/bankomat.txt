@@ -1,23 +1,28 @@
 Klasa - Class Bankomat()
-atrybut_klasy - stan konta = stank()
-atrybut - self.stan_konta - stan_konta_bankowego
-metoda - def PIN
+#atrybut_klasy - stan konta = stank()
+#atrybut - self.stan_konta - stan_konta_bankowego
+# tu lepszy byłby stan zasobów (nominały i kwota) bankomatu
+metoda - def PIN # do opróżniania i napełniania bankomatu, czy obsługa klienckiego (raczej zbędna tutaj)?
 metoda - def wybierz język
 metoda - def wpłata gotówki
 metoda - def wypłata gotówki
 metoda - def wydrukuj potwierdzenie
-metoda - def historia wypłat
+metoda - def  obsłuż/wyświetl historia wypłat
 metoda - def anuluj
 metoda - def sprawdź stan konta
 metoda - def wyciągnij kartę
 metoda - def zmiana PINu
 
-Klasa - Class Klient()
+Klasa - Class Klient() # jeden klient może mieć różne konta, może lepiej karta ( od klienta) i konto(z serwera banku)?
 atrybut_klasy - stan konta = stank()
 atrybut - self.stan_konta - stan_konta_bankowego
+atrybut - PIN
 metoda - def włóż kartę
 metoda - def wprowadź PIN
 metoda - def wpłata gotówki
 metoda - def wypłata gotówki
+zmień pin
+sprawdź historię wypłat
 
+#za ta część 1,25/1,5pkt
 

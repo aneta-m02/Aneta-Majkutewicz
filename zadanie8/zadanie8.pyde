@@ -36,8 +36,7 @@ class Customer():
 
 def setup():
     size(220,100)
-    global library, Madzia
-    global library, Aneta
+    global library, Madzia, Aneta
     books = ["Naocznosc", "Sens Sztuki", "Harry Potter", "Hobbit"]
     library = Library(books) 
     Madzia = Customer()
@@ -63,3 +62,4 @@ def mouseClicked():
             library.lendBook(Aneta.requestBook("Hobbit")) 
         if mouseY >40 and mouseY <60:
             library.addBook(Aneta.returnBook())
+# 0,5/0,5 za tą część
