@@ -69,6 +69,7 @@ class Testowanie(unittest.TestCase):
         self.assertEqual(klient.book, "Hobbit")
         klient.returnBook()
         self.assertFalse(klient.haveBook)
+        # to należałoby rozdzielić na oddzielne testy, unittesty z założenia testują najmniejszą możłiwą cząstkę kodu
         
     def test_zwrocenie_ksiazki_do_biblioteki(self):
         biblioteka = Library(["Pan Tadeusz", "Wesele"])
@@ -78,3 +79,5 @@ class Testowanie(unittest.TestCase):
         
 if __name__ == '__main__':
     unittest.main()
+    
+#2pkt
