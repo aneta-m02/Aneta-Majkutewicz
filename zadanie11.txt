@@ -4,3 +4,5 @@ Kelner: Z jakimi dodatkami?
 Klient: Z lodami czekoladowymi, bitą śmietaną i różową posypką.
 
 Metoda - dekorator. Gofry jako podstawowa oferta, którą można modyfikować o konkretne dodatki.
+
+#2pkt
