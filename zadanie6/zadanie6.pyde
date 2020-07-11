@@ -14,9 +14,11 @@ class PasiastyKwadrat(Kwadrat):
         for pasek in range(0, paski): 
             line(x+_xLinii_, y, x+_xLinii_, y+self.bok)
             _xLinii_ +=space
-
-# brak dodatkowej klasy, a to ją bym oceniała
             
+class NiebieskiKwadrat(Kwadrat): # w tej formie ta klasa nie ma sensu, nic nie wnosi
+    def sketchNiebieski ( self, x, y): # niewykorzystujesz argumentu z kolorem w klasie
+        Kwadrat.sketch ( self, x, y)
+
 def setup():
     size(500, 500)
     global slownik_kolorow
@@ -32,11 +34,18 @@ def setup():
     duzyPasiastyKwadrat  = PasiastyKwadrat(120.0)
     duzyPasiastyKwadrat.sketchPasiasty(350, 100, 12)
     duzyPasiastyKwadrat.sketch(200, 370)
+    
+    malyNiebieskiKwadrat = NiebieskiKwadrat(20.0)
+    malyNiebieskiKwadrat.sketchNiebieski(50, 20)
+    malyNiebieskiKwadrat.sketchNiebieski(70, 50)
+    duzyNiebieskiKwadrat = NiebieskiKwadrat(40.0)
+    duzyNiebieskiKwadrat.sketchNiebieski(300, 20)
+    duzyNiebieskiKwadrat.sketchNiebieski(300, 70)
 
 def draw():
     malyKwadrat = Kwadrat(50.0) 
-    malyKwadrat.sketch(200, 300)
-    fill(*slownik_kolorow["fioletowy"])     
+    fill(*slownik_kolorow["fioletowy"])
+    malyKwadrat.sketch(200, 300)    
     duzyKwadrat = Kwadrat(200.0)
     duzyKwadrat.sketch(50, 75)
     fill(*slownik_kolorow["żółty"])
@@ -44,13 +53,22 @@ def draw():
     malyPasiastyKwadrat = PasiastyKwadrat(50.0)
     fill(*slownik_kolorow["różowy"]) 
     malyPasiastyKwadrat.sketchPasiasty(400, 300, 5)
-    fill(*slownik_kolorow["niebieski"]) 
+    fill(*slownik_kolorow["fioletowy"]) 
     malyPasiastyKwadrat.sketchPasiasty(50,300, 8) 
     fill(*slownik_kolorow["zielony"]) 
     duzyPasiastyKwadrat  = PasiastyKwadrat(120.0)
     duzyPasiastyKwadrat.sketchPasiasty(350, 100, 12)
     fill(*slownik_kolorow["żółty"])
     duzyPasiastyKwadrat.sketch(200, 370)
+    fill(*slownik_kolorow["różowy"])
+    
+    fill(*slownik_kolorow["niebieski"])
+    malyNiebieskiKwadrat = NiebieskiKwadrat(20.0)
+    malyNiebieskiKwadrat.sketchNiebieski(50, 20)
+    malyNiebieskiKwadrat.sketchNiebieski(70, 50)
+    duzyNiebieskiKwadrat = NiebieskiKwadrat(40.0)
+    duzyNiebieskiKwadrat.sketchNiebieski(300, 20)
+    duzyNiebieskiKwadrat.sketchNiebieski(300, 70)
     fill(*slownik_kolorow["niebieski"])
     
-#brak zrozumienia polecenia jest tu gorszym przewinieniem... 0pkt
+#0,75pkt
