@@ -18,3 +18,5 @@ def draw():
     finally:
         noFill()
         square(130, 130, 340)
+        
+#2pkt
